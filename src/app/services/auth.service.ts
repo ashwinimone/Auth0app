@@ -13,7 +13,7 @@ export class Auth{
        this.lock.on("authenticated", (authResult:any) => {
 
         //get user profile fields
-           this.lock.getUserInfo(authResult.accessToken, (error:any, profile:any){
+           this.lock.getProfile(authResult.accessToken, (error:any, profile:any){
                if(error){
                    console.log(error);
                }
